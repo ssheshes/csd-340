@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+	text-align: center;
+}
+
+#image-gallery {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	margin-top: 10%;
+}
+
+h3 {
+	text-align: center;
+}
+
+figure {
+	text-align: center;
+}
+
+figcaption {
+	font-style: italic;
+	font-size: .74em;
+	color: rgba(135,135,135,1.00) 
+}
+
+.index {
+	width: 100%;
+	margin-top: 60%;
+	text-align: right;
+	margin-bottom: 20px;
+}
+
+a.index:link {
+	text-decoration: none;
+}
+
+a.index:hover {
+	text-decoration: underline;
+}

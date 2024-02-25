@@ -1,0 +1,66 @@
+<!doctype html>
+<!-- Alexis Yang : CSD 340 Assignment 10.3 -->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description"
+content="CSD 340 Landing Page">
+    <meta name="keywords"
+content="">
+    <meta name="robots"
+content="nofollow">
+    <meta name="author"
+content="Alexis Yang">
+	<title>CSD 340 Web Development with HTML and CSS</title>
+	<script>
+      function displayImage(imageFile){
+        var largerImage = document.getElementById("mainImage");
+        var newNode = document.createElement("img");
+        newNode.id = "mainImage";
+        newNode.src = imageFile;
+        newNode.alt = "Large Image";
+        newNode.className = "mainImage";
+        newNode.style.width = "300px";
+        newNode.style.height = "200px";
+        largerImage.parentNode.replaceChild(newNode, largerImage);
+        
+      }
+    </script>
+</head>
+
+<body>
+	<div id="container">
+		<h1>Assignment 10.3: JavaScript - Part 2</h1>
+		<div>
+      		<a href=#
+         		onclick= "cave.src='cave_01.jpg';"
+			   	ondblclick= "cave.src='cave_02.jpg';"
+      		>
+        		<img border = "0" alt = "photo of a cave" name = "cave" src = "cave_02.jpg">
+      		</a>
+    	</div>
+		<div
+         	onmouseover="this.style.color='red';"
+         	onmouseout= "this.style.color='black';">
+
+      		Click image to change.
+      		<br />
+    	</div>
+		<div
+         	onmouseover="this.style.color='red';"
+         	onmouseout= "this.style.color='black';">
+
+      		Double click after to revert image.
+      		<br />
+    	</div>
+		<div>
+      		<a href=#
+         		onclick="moon.src='moon_01.jpg';"
+         		ondblclick= "moon.src='moon_02.jpg';"
+      		>
+        	<img border = "0" alt = "photo of a moon" name = "moon" src = "moon_02.jpg">
+      		</a>
+    	</div>
+	</div>
+</body>
+</html>

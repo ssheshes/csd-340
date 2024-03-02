@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- Alexis Yang : Module 11 Assignment -->
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="site.css">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <meta name="description" content="CSD 340 Landing Page" />
+    <meta name="keywords" content="" />
+    <meta name="robots" content="nofollow" />
+    <meta name="author" content="Alexis Yang" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div id="container">
+		<h1>Assignment 11.2: JavaScript - Part 3</h1>
+		<label for="task">Add a task to your To Do List:</label>
+    	<input type="text" id="task" placeholder="Type in task...">
+    	<br><br>
+
+    	<button onclick="addTask()">Add Task</button>
+    	<button onclick="deleteLastTask()">Delete Last Task</button>
+    	<button onclick="displayArray()">Display List</button>
+
+    	<script>
+        	// Array to store entries
+        	var tasks = [];
+
+        	function addTask() {
+            	var taskText = document.getElementById("task").value;
+            
+            	// Add entry to the array
+            	tasks.push(taskText);
+            
+            	// Alert the user
+            	alert("Added: " + taskText + " at position " + tasks.length);
+            
+            	// Clear the text box
+            	document.getElementById("task").value = "";
+        	}
+
+        	function deleteLastTask() {
+            	if (tasks.length === 0) {
+                	alert("To Do List is empty. Nothing to delete.");
+            	} else {
+                	// Delete the last entry from the array
+                	var deletedTask = tasks.pop();
+                	alert("Deleted: " + deletedTask);
+            	}
+        	}
+
+        	function displayArray() {
+            	if (tasks.length === 0) {
+                	alert("To Do List is empty.");
+            	} else {
+                	var displayString = "To Do List:\n";
+                	for (var i = 0; i < tasks.length; i++) {
+                    	displayString += (i + 1) + ". " + tasks[i] + "\n";
+                	}
+                	alert(displayString);
+            	}
+        	}
+    	</script>
+	</div>
+</body>
+</html>

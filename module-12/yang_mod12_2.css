@@ -20,11 +20,6 @@ ol {
 	font-weight: 300;
 	list-style: inside;
 	list-style-type: decimal;
-	border-style: solid;
-	border-color: red;
-	border-width: 1px;
-	border-radius: 15px;
-	padding: 10px;
 }
 
 ul {
@@ -41,6 +36,11 @@ ul {
 .left {
 	width: 45%;
 	float: left;
+	border-style: solid;
+	border-color: red;
+	border-width: 1px;
+	border-radius: 15px;
+	padding: 10px;
 }
 
 .right {

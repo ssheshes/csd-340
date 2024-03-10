@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- Alexis Yang : Assignment 12.2 -->
+<html lang="en">
+	<head>
+    	<link rel="stylesheet" href="yang_mod12_2.css">
+    	<title>CSD 340 Web Development with HTML and CSS</title>
+    	<meta name="description" content="CSD 340 Web Development with HTML and CSS Assignment 12.2" />
+    	<meta name="author" content="Alexis Yang" />
+	</head>
+
+<body>
+	<div id="container">
+	<h1>Assignment 12.2: JavaScript - Part 4</h1>
+		<div class="left">
+				<h3>Top 10 Favorite Books</h3>
+					<button onclick="displayOrder()">Top to Bottom</button>
+					<button onclick="displayReverseOrder()">Bottom to Top</button>
+					<ol id="myList"></ol>
+					<ol reversed id="myReversedList"></ol>
+					<script>
+						 // JavaScript array
+        				let booksArray = [
+                							"Heroic Death System",
+                							"Thrive in Catastrophe",
+                							"Founder of Diabolism",
+                							"Don't Pick up Boyfriends from the Trash Bin",
+                							"Sovereign of Judgement",
+                							"Scum Villain's Self-saving System",
+                							"There's a Beauty",
+                							"Thriller Tour Group",
+                							"God of Crime",
+                							"Reincarnator"
+            			];
+ 
+        				// Get the list container element
+        				let list =
+            				document.getElementById('myList');
+						
+						let reversedList = 
+							document.getElementById('myReversedList');
+ 
+        				//for (i = 0; i < booksArray.length; ++i) {
+            			//	let li = document.createElement('li');
+            			//		li.innerText = booksArray[i];
+            			//		list.appendChild(li);
+        				//	}
+						
+						// Function to display the array in order
+						function displayOrder() {
+							myReversedList.innerHTML = ""; // Clear the list
+							for (let i = 0; i < booksArray.length; i++) {
+								let li = document.createElement('li');
+								li.innerText = booksArray[i];
+								list.appendChild(li);
+							}
+						}
+
+						// Function to display the array in reverse order
+						function displayReverseOrder() {
+							list.innerHTML = ""; // Clear the list
+							for (let i = booksArray.length - 1; i >= 0; i--) {
+								let li = document.createElement('li');
+								li.innerText = booksArray[i];
+								myReversedList.appendChild(li);
+							}
+						}
+
+					</script>
+				
+		</div>
+		<div class="right">
+				<ul>
+				<h3>5 Things I've Learned Since the Course Started</h3>
+				<li>Nine percent of men and one-half percent of women are color blind.</li>
+				<li>People only remember four items at once.</li>
+				<li>People reconstruct memories each time they remember them.</li>
+				<li>The most vivid memories are wrong.</li>
+				<li>It's a good thing that people forget.</li></ul>
+		</div>
+		<div class="index">
+		<a class="index" href="../index.html">Index</a></div>
+	</div>
+</body>
+</html>
